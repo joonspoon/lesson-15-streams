@@ -9,10 +9,11 @@ public class StreamBasics {
 	
 	public static void main(String[] args) {
 		
-		/* 3 phases in a Stream pipeline: */
-		int sum = IntStream.range(5, 50)	// 1. create stream
-		.filter(x -> x < 20)				// 2. apply intermediate operation(s)
-		.sum();								// 3. terminate stream, reduces it to a value or a collection
+		/* 3 phases in a Stream pipeline... */
+		int sum = IntStream
+				.range(5, 50)			// 1. create stream
+				.filter(x -> x < 20)	// 2. apply intermediate operation(s)
+				.sum();					// 3. terminate stream (reduces it to a value or a collection)
 		
 		/* To create a Stream from a List (or any other Collection): */
 		List<Integer> listOfInts =  List.of(1, 2, 3);
