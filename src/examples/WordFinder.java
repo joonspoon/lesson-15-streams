@@ -13,11 +13,16 @@ public class WordFinder {
 	public static void main(String[] args) {
 		/* Find the word with the most Js in the dictionary. */
 		
-		// map strings to Words
-		Stream<Word> wordsWithJayCount = loadWordList().stream().map(wordAsString -> new Word(wordAsString, countOccurrences(wordAsString, 'j')));
+		// map the strings to Word objects
+		Stream<Word> wordsWithJayCount = loadWordList()
+				.stream()
+				.map(wordAsString -> new Word(wordAsString, countOccurrences(wordAsString, 'j')));
 		
-		// sort the words by most Js
-		Word mostJays = wordsWithJayCount.sorted((word1, word2) -> word2.numberOfJays - word1.numberOfJays).findFirst().get();
+		// sort the Words by most Js
+		Word mostJays = wordsWithJayCount
+				.sorted((word1, word2) -> word2.numberOfJays - word1.numberOfJays)
+				.findFirst()
+				.get();
 		
 		// the first item is the answer!
 		System.out.println(mostJays);
