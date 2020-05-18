@@ -100,7 +100,7 @@ public class _2_UsingStreams {
 //	@Test
 //	public void testMap2() throws Exception {
 //		String xString = "xxxoooxxxxxxxxoxoxoxoxoxo";
-//		assertEquals(9, AlgorithmsUsingStreams.countXs(xString));
+//		assertEquals(16, AlgorithmsUsingStreams.countXs(xString));
 //	}
 //
 //	/* Add all the even numbers. */
